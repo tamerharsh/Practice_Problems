@@ -5,4 +5,4 @@ This are the  practice problems .
 	Example:-
 	input : -hello good morning to all
 	output : -olleh doog gninrom ot lla
-*/
+
