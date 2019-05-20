@@ -1,4 +1,4 @@
-This are the  practice problems .
+The Problelm Statement is 
 
 1.WAP to revers the word.
 	
