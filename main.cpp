@@ -6,7 +6,7 @@
 #include<iterator>
 #include<string>
 #include<vector>
-/* Problem Number 8 
+/* Problem Number 8
 WAP to revers the word.
 Example:-
 	input : -hello good morning to all
@@ -15,24 +15,33 @@ Example:-
 int main()
 {
 	std::vector<char> storage;
-std::string str ="hello good morning to all" ;
+	std::string str = "hello good morning to all";
+
+	for (const auto & x : str)
+	{
+		if ((x != ' ')) { storage.push_back(x); }
 	
-for (const auto & x : str)
+		else if ((x == ' '))
 		{
-			if ((x != ' ')){ storage.push_back(x); }
-			else if()
-			else if ((x == ' ') )
+			for (std::vector<char>::reverse_iterator rit = storage.rbegin(); rit != storage.rend(); ++rit)
 			{
-				for (std::vector<char>::reverse_iterator rit = storage.rbegin(); rit != storage.rend(); ++rit)
-				{
-					std::cout << *rit;
-					
-				}
-				std::cout << " ";
-				storage.clear();
+				std::cout << *rit;
+
 			}
+			std::cout << " ";
+			storage.clear();
 		}
-		return 0; 
+	}
+
+	int last_occ = str.rfind(' ');
+
+	for (int i= str.size()-1; i>last_occ; i--) {
+
+		std::cout << str[i];
+
+
+	}
+	return 0;
 
 }
 
